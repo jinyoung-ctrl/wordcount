@@ -1,0 +1,9 @@
+# 시크릿
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
