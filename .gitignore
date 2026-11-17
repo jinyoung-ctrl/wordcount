@@ -10,3 +10,4 @@ venv/
 
 # Claude Code 로컬 문서
 CLAUDE.md
+.claude/
