@@ -3,6 +3,7 @@
 사용법: python wordcount.py <파일경로>
 """
 import sys
+from datetime import datetime
 from pathlib import Path
 
 
@@ -32,7 +33,8 @@ def main(argv: list[str]) -> int:
         print(f"오류: '{path}'을(를) 읽는 중 문제가 발생했습니다: {e}", file=sys.stderr)
         return 1
 
-    print(f"{path}: {count_words(text)} 단어")
+    run_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"{path}: {count_words(text)} 단어 (실행: {run_at})")
     return 0
 
 

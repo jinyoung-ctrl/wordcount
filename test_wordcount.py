@@ -31,7 +31,7 @@ class MainTest(unittest.TestCase):
             p.write_text("one two three", encoding="utf-8")
             code, out, err = self.run_main(str(p))
         self.assertEqual(code, 0)
-        self.assertIn("3 단어", out)
+        self.assertRegex(out, r": 3 단어 \(실행: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\)$")
         self.assertEqual(err, "")
 
     def test_utf8_bom(self):
